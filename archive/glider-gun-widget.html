@@ -1,0 +1,65 @@
+<!--
+  Game of Life glider-gun widget — removed from index.html on 2026-08-06.
+  It lived floated in the intro-text blurb, between the two <p class="lede">
+  paragraphs. To restore:
+
+  1. Move archive/life.js back to the site root (next to index.html).
+  2. Add `<script src="life.js"></script>` right before </body> in index.html.
+  3. Paste this markup back into .intro-text, between the two <p class="lede">
+     paragraphs:
+
+  <div class="life-window">
+    <div class="life-box">
+      <canvas aria-hidden="true"></canvas>
+    </div>
+    <p class="life-caption">A glider gun in Conway&rsquo;s Game of Life</p>
+  </div>
+
+  4. Add this CSS back to style.css:
+
+  .life-caption {
+    margin: 1.25rem 0 0;
+    font-style: italic;
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  .life-window {
+    float: right;
+    width: 8rem;
+    margin: 0.2rem 0 1rem 1.5rem;
+  }
+  .life-box {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.6rem;
+    background: #687ca3;
+    aspect-ratio: 2 / 1;
+    width: 100%;
+  }
+  .life-box canvas {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+  @media (max-width: 34rem) {
+    .life-window { float: none; width: 8rem; margin: 0 auto 1.2rem; }
+  }
+
+  5. Add `.life-window .life-caption` back into the shared caption selector
+     in style.css (currently just `.research-photo figcaption`), if you want
+     the two captions to keep matching:
+
+  .research-photo figcaption,
+  .life-window .life-caption {
+    font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+    font-style: normal;
+    font-size: 0.68rem;
+    line-height: 1.5;
+    color: var(--muted);
+    margin-top: 0.5rem;
+  }
+-->
